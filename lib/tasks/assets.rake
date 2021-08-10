@@ -195,7 +195,7 @@ def start_clock
 end
 
 def log_task_duration(task, start)
-  STDERR.puts "Done '#{task}' : #{(Process.clock_gettime(Process::CLOCK_MONOTONIC) - start).round(2)} secs"
+  STDERR.puts "Done '#{task}' : #{(start_clock - start).round(2)} secs"
   STDERR.puts
 end
 
